@@ -69,3 +69,5 @@ sub laby_name_look {
 
 output("start");
 input();
+
+1

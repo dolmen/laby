@@ -2,6 +2,6 @@ info:
 need	perl
 
 run:
-fetch	robot.pl
+fetch	LabyRobot.pm
 dump	program.pl
 spawn	perl program.pl

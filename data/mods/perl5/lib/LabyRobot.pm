@@ -1,49 +1,49 @@
 use strict;
 use warnings;
 
-sub output {
+sub output ($) {
      print "$_[0]\n";
      $|++;
 }
 
-sub input {
+sub input () {
     my $line = <STDIN>;
     if ($line eq "quit\n")
     { exit(0);}
     return $line;
 }
 
-sub laby_name_left {
+sub laby_name_left () {
   output("left");
   input();
 }
 
-sub laby_name_right {
+sub laby_name_right () {
   output("right");
   input();
 }
 
-sub laby_name_forward {
+sub laby_name_forward () {
   output("forward");
   input();
 }
 
-sub laby_name_take {
+sub laby_name_take () {
   output("take");
   input();
 }
 
-sub laby_name_drop {
+sub laby_name_drop () {
   output("drop");
   input();
 }
 
-sub laby_name_escape {
+sub laby_name_escape () {
     output("escape");
     input();
 }
 
-sub laby_name_say {
+sub laby_name_say ($) {
     output("say $_[0]");
     input();
 }
@@ -56,7 +56,7 @@ use constant laby_name_Web => 3;
 use constant laby_name_Exit => 4;
 use constant laby_name_Unknown => 5;
 
-sub laby_name_look {
+sub laby_name_look () {
   output("look");
   my $ans = input();
   if ($ans eq "void\n"){ return laby_name_Void;}

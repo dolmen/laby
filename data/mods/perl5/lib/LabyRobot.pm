@@ -61,9 +61,18 @@ sub laby_name_look () {
   return laby_name_Unknown;
 }
 
-# Set autoflush
-$|++;
 
-_action "start";
+# Let's start automatically after the main program is compiled
+# (so we fail early in case of syntax error) but before the first command runs.
+#
+# Note: this is the first time in my Perl career that I have to use an INIT
+# block! -- Olivier Mengué
+
+INIT {
+    # Enable autoflush
+    $| = 1;
+
+    _action 'start'
+}
 
 1

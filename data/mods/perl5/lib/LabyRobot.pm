@@ -1,3 +1,6 @@
+# This is a fake module that injects functions into the main program
+package main;
+
 use strict;
 use warnings;
 

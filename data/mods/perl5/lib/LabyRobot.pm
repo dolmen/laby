@@ -4,12 +4,12 @@ package main;
 use strict;
 use warnings;
 
-sub output ($) {
+sub _output ($) {
      print "$_[0]\n";
      $|++;
 }
 
-sub input () {
+sub _input () {
     my $line = <STDIN>;
     if ($line eq "quit\n")
     { exit(0);}
@@ -17,38 +17,38 @@ sub input () {
 }
 
 sub laby_name_left () {
-  output "left";
-  input;
+  _output "left";
+  _input;
 }
 
 sub laby_name_right () {
-  output "right";
-  input;
+  _output "right";
+  _input;
 }
 
 sub laby_name_forward () {
-  output "forward";
-  input;
+  _output "forward";
+  _input;
 }
 
 sub laby_name_take () {
-  output "take";
-  input;
+  _output "take";
+  _input;
 }
 
 sub laby_name_drop () {
-  output "drop";
-  input;
+  _output "drop";
+  _input;
 }
 
 sub laby_name_escape () {
-    output "escape";
-    input;
+    _output "escape";
+    _input;
 }
 
 sub laby_name_say ($) {
-    output "say $_[0]";
-    input;
+    _output "say $_[0]";
+    _input;
 }
 
 
@@ -62,8 +62,8 @@ use constant {
 };
 
 sub laby_name_look () {
-  output "look";
-  my $ans = input();
+  _output "look";
+  my $ans = _input();
   if ($ans eq "void\n"){ return laby_name_Void;}
   if ($ans eq "wall\n"){ return laby_name_Wall;}
   if ($ans eq "rock\n"){ return laby_name_Rock;}
@@ -72,7 +72,7 @@ sub laby_name_look () {
   return laby_name_Unknown;
 }
 
-output "start";
-input;
+_output "start";
+_input;
 
 1

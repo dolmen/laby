@@ -6,7 +6,6 @@ use warnings;
 
 sub _output ($) {
      print "$_[0]\n";
-     $|++;
 }
 
 sub _input () {
@@ -71,6 +70,9 @@ sub laby_name_look () {
   if ($ans eq "exit\n"){ return laby_name_Exit;}
   return laby_name_Unknown;
 }
+
+# Set autoflush
+$|++;
 
 _output "start";
 _input;

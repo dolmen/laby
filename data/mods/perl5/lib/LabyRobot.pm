@@ -49,12 +49,14 @@ sub laby_name_say ($) {
 }
 
 
-use constant laby_name_Void => 0;
-use constant laby_name_Wall => 1;
-use constant laby_name_Rock => 2;
-use constant laby_name_Web => 3;
-use constant laby_name_Exit => 4;
-use constant laby_name_Unknown => 5;
+use constant {
+    laby_name_Void     => 0,
+    laby_name_Wall     => 1,
+    laby_name_Rock     => 2,
+    laby_name_Web      => 3,
+    laby_name_Exit     => 4,
+    laby_name_Unknown  => 5,
+};
 
 sub laby_name_look () {
   output "look";

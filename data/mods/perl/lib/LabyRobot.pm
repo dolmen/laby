@@ -4,6 +4,11 @@ package main;
 use strict;
 use warnings;
 
+sub LabyRobot::import
+{
+    strict->import;
+    warnings->import(FATAL => 'all');
+}
 
 sub _action ($) {
     print "$_[0]\n";

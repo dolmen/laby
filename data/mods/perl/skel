@@ -1,5 +1,3 @@
-use strict;
-use warnings;
 use LabyRobot;
 
 laby_name_right;
